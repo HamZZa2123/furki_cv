@@ -152,8 +152,19 @@ h1 {
 }
 
 @media (max-width: 680px) {
+  .layout {
+    padding: 12px 8px 16px;
+  }
+
+  .book-shell {
+    padding: 10px;
+    border-radius: 12px;
+  }
+
   .toolbar {
     gap: 8px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
   }
 
   .toolbar button {
@@ -161,7 +172,31 @@ h1 {
   }
 
   #book {
-    width: 560px;
-    height: 420px;
+    width: 100%;
+    height: min(58vh, 360px);
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 20px;
+    margin-bottom: 6px;
+  }
+
+  .note {
+    margin-bottom: 10px;
+    font-size: 12px;
+  }
+
+  #book {
+    height: min(54vh, 320px);
+  }
+
+  .page {
+    padding: 10px;
+  }
+
+  .page img {
+    height: 84%;
   }
 }
