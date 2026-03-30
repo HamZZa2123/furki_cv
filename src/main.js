@@ -55,13 +55,13 @@ if ((innerPages.length + 2) % 2 !== 0) {
 bookElement.appendChild(createPage(backCover, "Arka Kapak"));
 
 const pageFlip = new St.PageFlip(bookElement, {
-  width: 460,
-  height: 620,
+  width: 420,
+  height: 560,
   size: "stretch",
   minWidth: 260,
-  maxWidth: 920,
+  maxWidth: 460,
   minHeight: 360,
-  maxHeight: 1240,
+  maxHeight: 620,
   maxShadowOpacity: 0.65,
   drawShadow: true,
   flippingTime: 950,
