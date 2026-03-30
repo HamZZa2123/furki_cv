@@ -1,2 +1,1 @@
-# furki_cv
-Furkan ERBİLİCİ CV
+# Furkan ERBİLİCİ CV
