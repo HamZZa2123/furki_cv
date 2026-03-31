@@ -12,6 +12,12 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -19,36 +25,63 @@ body {
   background: radial-gradient(circle at top, var(--bg-start), var(--bg-end));
   color: var(--ink);
   overflow-x: hidden;
+  position: relative;
+}
+
+.bg-iframe-wrap {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.bg-iframe-wrap iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.bg-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(5, 12, 24, 0.28);
+  pointer-events: none;
 }
 
 .layout {
   width: min(1120px, 96vw);
   margin: 0 auto;
-  padding: 20px 12px 28px;
+  padding: 20px 12px 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 1;
 }
 
 h1 {
-  margin: 0 0 10px;
+  margin: 0 0 4px;
   font-size: clamp(20px, 3vw, 34px);
   text-align: center;
 }
 
 .note {
-  margin: 0 0 18px;
+  margin: 0 0 8px;
   text-align: center;
   color: var(--muted);
   font-size: 14px;
 }
 
 .book-shell {
-  width: min(980px, 100%);
+  width: min(940px, 100%);
   background: color-mix(in srgb, var(--card) 90%, #eff3fb 10%);
   border: 1px solid var(--line);
   border-radius: 16px;
-  padding: 14px;
+  padding: 0;
+  overflow: hidden;
   box-shadow: 0 10px 28px rgba(28, 40, 66, 0.12);
 }
 
@@ -58,6 +91,15 @@ h1 {
   justify-content: center;
   gap: 10px;
   margin-bottom: 14px;
+}
+
+.toolbar-title {
+  font-size: clamp(16px, 2.2vw, 26px);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #000000;
+  text-shadow: none;
 }
 
 .toolbar button {
@@ -101,6 +143,7 @@ h1 {
   display: flex;
   justify-content: center;
   overflow: hidden;
+  margin-top: 0;
 }
 
 #book {
@@ -116,7 +159,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 14px;
+  padding: 5px;
   box-shadow: inset 0 0 0 1px #eef2fb;
 }
 
@@ -138,10 +181,16 @@ h1 {
 }
 
 .page p {
-  margin: 8px 0 0;
+  margin: 4px 0 0;
   font-size: 14px;
   color: #4a5468;
   text-align: center;
+}
+
+h1,
+.note {
+  color: #ffffff;
+  text-shadow: 0 0 8px rgba(0, 0, 0, 0.45);
 }
 
 @media (max-width: 860px) {
@@ -157,7 +206,7 @@ h1 {
   }
 
   .book-shell {
-    padding: 8px;
+    padding: 0;
     border-radius: 12px;
   }
 
