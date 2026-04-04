@@ -35,8 +35,8 @@ body {
   pointer-events: none;
   background-color: #1a1d22;
   background-image:
-    linear-gradient(rgba(10, 14, 20, 0.45), rgba(10, 14, 20, 0.55)),
-    url("../images/background-hall.png");
+    linear-gradient(rgba(18, 14, 10, 0.38), rgba(12, 10, 8, 0.52)),
+    url("../images/suit-islak-hacim-1.png");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
